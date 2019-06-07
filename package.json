@@ -1,0 +1,23 @@
+{
+  "name": "Google-Translate",
+  "version": "1.0.0",
+  "description": "A Web-Scraping project to automate translations. A .csv file is taken as input where first column contains text to be translated and second column contains langage to which the corressponding text is to be translated. Output is a .csv file which contains first two columns as described earlier and a third column which will contain translated text.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gurmeet22/Google-Translate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gurmeet22/Google-Translate/issues"
+  },
+  "homepage": "https://github.com/Gurmeet22/Google-Translate#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
