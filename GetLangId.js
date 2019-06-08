@@ -38,7 +38,7 @@ const getId = async () => {
             if(name == ''){
                 name = 'English'
             }
-            result.arrayLang.push(name)
+            result.arrayLang.push(name.toLowerCase())
             result.arrayIndex.push(ids)
             // console.log(result)
             count++;
