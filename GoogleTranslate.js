@@ -24,6 +24,7 @@ const Scrape = async () => {
     const driver = await new Builder().forBrowser('firefox').build();
     try {
         await driver.get(url);
+        
         console.log('Hi')
         fs.createReadStream(csvPath)
         .pipe(parser({delimiter: ','}))
@@ -74,7 +75,7 @@ const Scrape = async () => {
                         } catch(e) {
                             console.log("Exception caught 4 ");
                         }
-                        const translatedText = await driver.findElement(By.xpath('//div[@class="tlid-results-container"]/div/div/div[2]/div/span')).getText()
+                        const translatedText = await driver.wait(until.elementLocated(By.xpath('//span[@class="tlid-translation translation"]')), 3000).getText()
                         console.log(translatedText)
                         finalData.push({
                             text: "\""+csvData.text[count]+"\"",
